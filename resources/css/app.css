@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.employee-cards{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (max-width: 500px) {
+    .employee-cards{
+        grid-template-columns: repeat(auto-fit, minmax(90vw, 1fr));
+    }
+}
