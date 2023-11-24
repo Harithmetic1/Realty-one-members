@@ -20,7 +20,7 @@ return new class extends Migration
                 $table->string('bio')->nullable();
                 $table->string('profile_picture')->nullable();
                 $table->string('Department');
-                $table->string('Role');
+                $table->string('role_id')->nullable()->constrained();
             }
         );
     }
