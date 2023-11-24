@@ -28,7 +28,7 @@ export default function Welcome({ auth, users, laravelVersion, phpVersion }) {
         if (filterBy === 'all') {
             setFilteredUsers(users);
         } else {
-            setFilteredUsers(users.filter((user) => user.division === filterBy));
+            setFilteredUsers(users.filter((user) => user.Department === filterBy));
         }
 
         console.log(filteredUsers);

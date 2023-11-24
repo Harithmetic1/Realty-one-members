@@ -15,18 +15,18 @@ const Employee = ({ user, auth }) => {
     <>
     <Head title={user.name} />
 
-    <nav className="nav-bar md:px-8 p-4 mb-12 flex justify-between items-center">
+    <nav className="nav-bar px-8 p-4 mb-12 flex justify-between items-center">
         <Navbar auth={auth}/>
     </nav>
     <div className='flex flex-col md:flex-row justify-between gap-4 items-center pt-0 p-4'>
-        <div className="lhs w-full h-full">
+        <div className="lhs w-full md:w-[40vw] h-full">
             <div className="user-details flex flex-col gap-3">
                 <div className="user-details-img w-full h-fit flex justify-center items-center">
                     <img src={user.profile_picture} alt={user.name} className='w-full object-contain h-[60vh]' />
                 </div>
                 <div className="user-details-content flex flex-col items-center justify-center">
                     <h2 className="user-details-content-name text-2xl font-bold">{user.name}</h2>
-                    <p className="user-details-content-position text-sm">{user.role}</p>
+                    <p className="user-details-content-position text-sm">{user.Role}</p>
                 </div>
                 <div className="help-btns text-white">
                     <div className="message-btn flex flex-col gap-3">
@@ -110,7 +110,7 @@ const Employee = ({ user, auth }) => {
                     <FontAwesomeIcon icon={faBriefcase} />
                 </span>
                 {
-                    user.division
+                    user.Department
                 }
             </p>
         </div>

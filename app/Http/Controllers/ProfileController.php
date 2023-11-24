@@ -25,12 +25,12 @@ class ProfileController extends Controller
     {
         $users = User::all();
         // echo ($users);
-        foreach ($users as $user) {
-            $role = DB::table('role')->where('id', $user->role_id)->first()->name;
-            $division = DB::table('division')->where('id', $user->division_id)->first()->name;
-            $user->role = $role;
-            $user->division = $division;
-        }
+        // foreach ($users as $user) {
+        //     $role = DB::table('role')->where('id', $user->role_id)->first()->name;
+        //     $division = DB::table('division')->where('id', $user->division_id)->first()->name;
+        //     $user->role = $role;
+        //     $user->division = $division;
+        // }
         return Inertia::render('Welcome', ['users' => $users]);
     }
 
@@ -40,10 +40,10 @@ class ProfileController extends Controller
     public function getUser(Request $request): Response
     {
         $user = User::find($request->id);
-        $role = DB::table('role')->where('id', $user->role_id)->first()->name;
-        $division = DB::table('division')->where('id', $user->division_id)->first()->name;
-        $user->role = $role;
-        $user->division = $division;
+        // $role = DB::table('role')->where('id', $user->role_id)->first()->name;
+        // $division = DB::table('division')->where('id', $user->division_id)->first()->name;
+        // $user->role = $role;
+        // $user->division = $division;
         return Inertia::render('Employee', ['user' => $user]);
     }
 

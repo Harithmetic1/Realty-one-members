@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from '@inertiajs/react';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
-const EmployeeCard = ({ name, linkedin, instagram, twitter, phone, facebook, profile_picture, role, id }) => {
+const EmployeeCard = ({ name, linkedin, instagram, twitter, phone, facebook, profile_picture, Role, id }) => {
     const handleClickUser = async (e) => {
         route(`/user/${id}`)
     }
@@ -59,7 +59,7 @@ const EmployeeCard = ({ name, linkedin, instagram, twitter, phone, facebook, pro
         </div>
         <div className="employee-card-overlay-content text-black text-center">
                     <h3 className="employee-card-overlay-content-name text-2xl font-bold">{name}</h3>
-                    <p className="employee-card-overlay-content-position text-sm">{role}</p>
+                    <p className="employee-card-overlay-content-position text-sm">{Role}</p>
                 </div>
     </div>
   )
