@@ -17,6 +17,12 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->foreignId('division_id')->nullable()->constrained();
+            $table->string('phone');
+            $table->string('bio')->nullable();
+            $table->string('profile_picture')->nullable();
+            $table->string('Department');
+            $table->string('role_id')->nullable()->constrained();
             $table->rememberToken();
             $table->timestamps();
         });
