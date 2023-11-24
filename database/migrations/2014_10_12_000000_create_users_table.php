@@ -21,7 +21,8 @@ return new class extends Migration
             $table->string('phone');
             $table->string('bio')->nullable();
             $table->string('profile_picture')->nullable();
-            $table->string('Department');
+            $table->dropColumn('Department');
+            $table->string('division_id')->nullable()->constrained();
             $table->string('role_id')->nullable()->constrained();
             $table->rememberToken();
             $table->timestamps();
